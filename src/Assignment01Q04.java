@@ -1,6 +1,13 @@
 import java.util.Arrays;
 
 public class Assignment01Q04 {
+    /*
+     * Shifts the elements of an array cyclically by a specified number of positions.
+     * @param array The input array to be shifted.
+     * @param move The number of positions to shift.
+     * @param direction The direction of the shift ('L' for left, 'R' for right).
+     * @return The shifted array.
+     */
 
     public static int[] shiftArrayCyclic(int[] array, int move, char direction) {
         if (array.length == 0) {
