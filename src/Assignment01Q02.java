@@ -1,16 +1,23 @@
 public class Assignment01Q02 {
     public static void main(String[] args) {
+        /*
+         * Approximates the value of Pi using the Leibniz formula.
+         * @param args Command-line arguments, where args[0] is the number of terms to use in the approximation.
+         */
         double actualPi = Math.PI;
         double approxPi = 0;
 
-        int terms = Integer.parseInt(args[0]);
-        double sum = 0.0;
-        for (int i = 0; i < terms; i++) {
-            double term = 1.0 / (2.0 * i + 1.0);
-            sum += (i & 1) == 0 ? term : -term;
+        int n = Integer.parseInt(args[0]);
+        // Approximate Pi using the formula
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                approxPi += 1.0 / (2 * i + 1);
+            } else {
+                approxPi -= 1.0 / (2 * i + 1);
+            }
         }
-        approxPi = 4.0 * sum;
-        
+        approxPi *= 4;
+
         System.out.println(approxPi + " " + actualPi);
     }
 }
