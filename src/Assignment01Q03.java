@@ -1,5 +1,9 @@
 public class Assignment01Q03 {
     public static void main(String[] args) {
+        /*
+         * Prints the first x Fibonacci numbers and counts the number of odd numbers among them.
+         * @param args Command-line arguments, where args[0] is the number of Fibonacci numbers to print.
+         */
         int x = Integer.parseInt(args[0]);
         System.out.println("The first " + x + " Fibonacci numbers are:");
 
